@@ -12,3 +12,9 @@
     Facter.add(:system_role) do
       setcode 'cat /etc/system_role'
     end
+
+## Referenced in Puppet:
+
+    if $::system_role == '...' {
+      ...
+    }
